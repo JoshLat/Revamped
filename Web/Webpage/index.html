@@ -1,0 +1,141 @@
+<html>
+
+<head>
+  <title>ITEAM</title>
+  <link rel="shortcut icon" href="../WebResources/Images/iTeamLogoBlueICON.ico" />
+  <script src="../WebResources/Libs/React/react.js"></script>
+  <script src="../WebResources/Libs/React/react-dom.js"></script>
+  <script src="./Utilities.js"></script>
+  <script src="https://fb.me/JSXTransformer-0.13.3.js"></script>
+  <script src="https://code.jquery.com/jquery-3.2.1.js"></script>
+  <link rel="stylesheet" href="../WebResources/Libs/Materialize/css/materialize.min.css">
+  <link rel="stylesheet" href="./style.css">
+
+  <script type="text/javascript">
+    //////////////////////////////////STARTUP FUCTIONS//////////////////////////////////
+    //TimeDate Parameters for constructor = option
+    new TimeDate("date").getFormattedData();
+    new TimeDate("time").getFormattedData();
+    //Get Tasks & output them || team, task/due, divid
+    new TaskDueMOTDNotes("oemmarketing", "task", "oemmarkid").GetTask();
+    /*new TaskDueMOTDNotes("techsupport", "task", "techid").GetTask();
+    new TaskDueMOTDNotes("webprogramming", "task", "webproid").GetTask();
+    new TaskDueMOTDNotes("everyone", "task", "everyid").GetTask();
+    //Get Due dates & output them || team, task/due, divid
+    new TaskDueMOTDNotes("oemmarketing", "due", "oemdue").GetDue();
+    new TaskDueMOTDNotes("techsupport", "due", "techdue").GetDue();
+    new TaskDueMOTDNotes("webprogramming", "due", "webdue").GetDue();
+    new TaskDueMOTDNotes("everyone", "due", "everydue").GetDue();
+    //Get motd & output it || null, option, divid
+    new TaskDueMOTDNotes(null, "motd", "motdid").GetMOTD();
+    //Get notes &output them || null, option, divid
+    new TaskDueMOTDNotes(null, "notes1", "notes1id").GetNotes();
+    new TaskDueMOTDNotes(null, "notes2", "notes2id").GetNotes();*/
+    //////////////////////////////////STARTUP FUCTIONS//////////////////////////////////
+  </script>
+
+</head>
+
+<body class="white">
+
+  <div id="navbar">
+    <nav>
+      <div class="nav-wrapper z-depth-5 blue darken-3">
+        <a href="#" class="brand-logo center"><img id="iTeamLogo" src="../WebResources/Images/iTeamLogoWhite.png"></a>
+        <div id="navsections">
+          <div id="datediv" class="left"><h4 id="dateid"></h4></div>
+          <div id="timediv" class="right"><h4 id="timeid"></h4></div>
+        </div>
+      </div>
+    </nav>
+  </div>
+
+  <div id="DataContainer">
+    <center>
+      <br>
+      <div class="container">
+        <div class="row">
+          <div id="motdid"></div>
+          <div class="col s12 card-panel z-depth-4 blue darken-3 white-text">
+            <h3>Tasks</h3>
+            <div class="col s6">
+              <div class="card-panel blue accent-4 white-text">
+                <div class="align">
+                  <h4 class="floatleft">OEM & Marketing/Sales</h4>
+                  <h4 class="floatright">Due</h4>
+                </div>
+                <hr>
+                <marquee direction="up" height="120px" scrolldelay="400" behavior="alternate">
+                  <div class="align">
+                    <h5 class="floatleft" id="oemmarkid1"></h5>
+                    <h5 class="floatright" id="oemdue1"></h5>
+                  </div>
+                  <div class="align">
+                    <h5 class="floatleft" id="oemmarkid2"></h5>
+                    <h5 class="floatright" id="oemdue2"></h5>
+                  </div>
+                  <div class="align">
+                    <h5 class="floatleft" id="oemmarkid3"></h5>
+                    <h5 class="floatright" id="oemdue3"></h5>
+                  </div>
+                  <div class="align">
+                    <h5 class="floatleft" id="oemmarkid4"></h5>
+                    <h5 class="floatright" id="oemdue4"></h5>
+                  </div>
+                  <div class="align">
+                    <h5 class="floatleft" id="oemmarkid5"></h5>
+                    <h5 class="floatright" id="oemdue5"></h5>
+                  </div>
+                </marquee>
+              </div>
+            </div>
+            <div class="col s6">
+              <div class="card-panel blue accent-4 white-text">
+                <div class="align">
+                  <h4 class="floatleft">Tech Support</h4>
+                  <h4 class="floatright">Due</h4>
+                </div>
+                <hr>
+                <div class="align">
+                  <h5 class="floatleft" id="techid"></h5>
+                  <h5 class="floatright" id="techdue"></h5>
+                </div>
+              </div>
+            </div>
+            <div class="col s6">
+              <div class="card-panel blue accent-4 white-text">
+                <div class="align">
+                  <h4 class="floatleft">Web/Programming</h4>
+                  <h4 class="floatright">Due</h4>
+                </div>
+                <hr>
+                <div class="align">
+                  <h5 class="floatleft" id="webproid"></h5>
+                  <h5 class="floatright" id="webdue"></h5>
+                </div>
+              </div>
+            </div>
+            <div class="col s6">
+              <div class="card-panel blue accent-4 white-text">
+                <div class="align">
+                  <h4 class="floatleft">Everyone</h4>
+                  <h4 class="floatright">Due</h4>
+                </div>
+                <hr>
+                <div class="align">
+                  <h5 class="floatleft" id="everyid"></h5>
+                  <h5 class="floatright" id="everydue"></h5>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="notes1" id="notes1id"></div>
+          <div class="notes2" id="notes2id"></div>
+        </div>
+      </div>
+    </center>
+  </div>
+
+</body>
+
+</html>

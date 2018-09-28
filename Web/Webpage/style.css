@@ -1,0 +1,38 @@
+#iTeamLogo {
+  padding-top: 0px;
+  height: 70px;
+  width: auto;
+}
+
+#timeid, #dateid {
+  padding-top: 4px;
+  padding-right: 10px;
+  padding-left: 10px;
+}
+
+nav {
+    height: 70px;
+    line-height: 30px;
+}
+
+.container, .col, .s12, .row {
+  height: auto;
+  width: 98%;
+}
+
+.align {
+  display: inline-block;
+  width: 100%;
+}
+
+.floatright {
+  float: right;
+  margin-left: 15px;
+}
+
+.floatleft {
+  float: left;
+  margin-left: 15px;
+}
+
+/*vertical scrolling text!*/
